@@ -3,127 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The HTML Project</title>
+    <title>The HTML Project Landing Page</title>
     <meta name="description" content="Welcome to The HTML Project's landing page. My site is currently up on GitHub, so please click the button below to get redirected. Enjoy!">
-    <link rel="icon" href="https://thehtmlproject.github.io/home/Icon.jpeg">
+    <link rel="icon" href="https://assets.thehtmlproject.com/icon.jpeg">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --background-light: #f0f0f0;
-            --text-light: #333;
-            --background-dark: #1a1a1a;
-            --text-dark: #f0f0f0;
-            --primary-button: #28a745; /* Green */
-            --secondary-button: #007BFF; /* Blue */
-            --button-text: white;
-        }
-
-        body {
-            background-color: var(--background-light);
-            color: var(--text-light);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: 'Noto Sans', sans-serif;
-            text-align: center;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: var(--background-dark);
-                color: var(--text-dark);
-            }
-        }
-
-        .title-logo {
-            margin-bottom: 20px;
-        }
-
-        .title-logo .title {
-            font-size: 32px;
-            font-weight: bold;
-        }
-
-        .title-logo .logo img {
-            width: 120px;
-            height: auto;
-            margin-top: 10px;
-        }
-
-        .description {
-            font-size: 18px;
-            margin-top: 10px;
-            max-width: 600px;
-        }
-
-        .bottom-button {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        button {
-            padding: 12px 24px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: 'Noto Sans', sans-serif;
-            width: 250px;
-            margin: 10px 0;
-        }
-
-        .primary {
-            background-color: var(--primary-button);
-            color: var(--button-text);
-            font-weight: bold;
-        }
-
-        .secondary {
-            background-color: var(--secondary-button);
-            color: var(--button-text);
-        }
-    </style>
+    <link rel="stylesheet" href="https://assets.thehtmlproject.com/css/landers/style.css">
 </head>
 <body>
     <div class="title-logo">
         <div class="logo">
-            <img src="https://thehtmlproject.github.io/home/Icon.jpeg" alt="Logo">
+            <img src="https://assets.thehtmlproject.com/icon.jpeg" alt="Logo">
         </div>
         <div class="title">The HTML Project</div>
     </div>
     <div class="description">
-        Welcome to The HTML Project's landing page. My site is currently up on GitHub, so please click "Go to my Website" below to get redirected. Enjoy!
+        Welcome to The HTML Project's landing page. My site is currently up on thehtmlproject.com, so please click "Go to my Website" below to get redirected. Enjoy!
     </div>
     <div class="bottom-button">
         <button class="primary" onclick="window.location.href='/redirect/'">Go to my Website</button>
         <button class="secondary" onclick="window.location.href='/preview/'">Preview my Website</button>
-        <button class="secondary" onclick="window.location.href='https://pulsar.thehtmlproject.com'">Go to Pulsar</button>
+
     </div>
     <div class="countdown" id="timer">Redirecting in 5 seconds...</div>
 
-    <script>
-        let seconds = 5;
-        const timerElement = document.getElementById('timer');
-        const redirectUrl = "/redirect/";
-
-        const countdown = setInterval(() => {
-            seconds--;
-            if (seconds > 0) {
-                timerElement.textContent = `Redirecting in ${seconds} seconds...`;
-            } else {
-                clearInterval(countdown);
-                window.location.href = redirectUrl;
-            }
-        }, 1000);
-
-        
-
-    </script>
+    <link rel="stylesheet" href="https://assets.thehtmlproject.com/script/landers/script.js">
 </body>
 </html>
